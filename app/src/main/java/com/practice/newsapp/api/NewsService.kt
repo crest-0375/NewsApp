@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object NewsService {
     private const val BASE_URL = "https://raw.githubusercontent.com/DevTides/NewsApi/master/"
-    const val DELAY = 2000L
+    const val DELAY = 1600L
 
     val retrofitBuilder: NewsInterface = Retrofit.Builder()
         .baseUrl(BASE_URL)

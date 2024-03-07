@@ -8,9 +8,9 @@ class NewsRepository {
 
     fun getNewsArticle() = flow {
         val newsSource = NewsService.retrofitBuilder.getNews()
+        delay(NewsService.DELAY)
         newsSource.forEach {
             emit(it)
-            delay(NewsService.DELAY)
         }
     }
 }
